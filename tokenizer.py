@@ -1,0 +1,31 @@
+# ============================================================
+#                  Vocabulary and tokenization
+# ============================================================
+
+def build_vocab(text):
+    vocabulary = sorted(set(text))
+    size_vocabulary = len(vocabulary)
+    stoi = {}
+    itos = {}
+
+    for i, ch in enumerate(vocabulary):
+        itos[i] = ch 
+        stoi[ch] = i 
+    
+    return vocabulary, size_vocabulary, itos, stoi 
+
+
+# Encode function 
+def encode(text, stoi):
+    result = []
+    for ch in text: 
+        result.append(stoi[ch])
+    return result 
+
+# Decode function 
+def decode(ids,itos):
+    result = ""
+    for i in ids: 
+        result += itos[int(i)]
+    return result 
+
