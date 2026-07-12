@@ -2,10 +2,10 @@
 #                                  Main script 
 # ==============================================================================
 import torch 
-from tokenization import build_vocab, encode, decode 
-from prepare_data import load_data, prepare_text, get_batch
-from model_transformer import MiniGPT
-from train_model import train
+from tokenizer import build_vocab, encode, decode 
+from data import load_data, prepare_text, get_batch
+from model import MiniGPT
+from train import train
 
 # ==============================================================================
 #                                    Hyperparameters 
