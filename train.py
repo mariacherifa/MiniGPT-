@@ -54,6 +54,7 @@ def train(model, train_data, val_data,learning_rate,eval_interval,batch_size,blo
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
+    return model 
 
     
 
